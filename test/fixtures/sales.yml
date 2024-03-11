@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  sale_date: 2024-03-10
+  total: 9.99
+  tiend: one
+
+two:
+  customer_name: MyString
+  sale_date: 2024-03-10
+  total: 9.99
+  tiend: two

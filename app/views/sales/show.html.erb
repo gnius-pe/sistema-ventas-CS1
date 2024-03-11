@@ -1,0 +1,27 @@
+<p><strong>Nombre del Perfil:</strong> <%= @sale.tiend.name %></p>
+<p><strong>Nombre del Cliente:</strong> <%= @sale.customer_name %></p>
+<p><strong>Fecha de Venta:</strong> <%= @sale.created_at.to_date %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Precio Unitario</th>
+      <th>Importe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sale.sale_items.each do |item| %>
+      <tr>
+        <td><%= item.product.name %></td>
+        <td><%= item.quantity %></td>
+        <td><%= number_to_currency(item.price) %></td>
+        <td><%= number_to_currency(item.quantity * item.price) %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td colspan="3"><strong>Total:</strong></td>
+      <td><%= number_to_currency(@sale.total) %></td>
+    </tr>
+  </tbody>
+</table>

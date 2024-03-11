@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <ul>
+            <li class="nav-item"><%= link_to 'Cerrar sesión', tiends_sign_out_path, method: :delete %></li>
+            </ul>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <!-- Contenido principal aquí -->
+      <h1>Bienvenido a tu perfil</h1>
+      <p>Aquí puedes ver y editar tu información personal.</p>
+      <%= link_to 'administrador', products_path, class: 'btn btn-primary' %>
+      
+      <%= link_to 'Realizar Venta', new_sale_path, class: 'btn btn-primary' %>
+      
+    
+      
+    </main>
+  </div>  
+</div>
+
+
+  <%= link_to 'Mostrar Factura', factura_sale_path(@sales)%>
+
+

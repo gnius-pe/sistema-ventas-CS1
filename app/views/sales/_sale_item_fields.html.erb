@@ -1,0 +1,13 @@
+<div class="sale_item">
+  <%= f.label :product_id, 'Producto' %>
+  <%= f.collection_select :product_id, Product.all, :id, :name %>
+
+  <%= f.label :quantity, 'Cantidad' %>
+  <%= f.number_field :quantity %>
+
+  <%= f.label :price, 'Precio' %>
+  <%= f.number_field :price %>
+
+  <%= link_to 'Eliminar', '#', class: 'remove_product' %>
+</div>
+<%= render 'sale_item_fields', f: @sale_item %>

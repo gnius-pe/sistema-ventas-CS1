@@ -1,0 +1,5 @@
+development:
+  username_postgres: postgres
+  password_postgres: postgres
+  host_postgres:  localhost
+  port_postgres: "5432"

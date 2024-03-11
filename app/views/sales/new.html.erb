@@ -1,0 +1,17 @@
+<%= form_with model: Sale.new, local: true do |form| %>
+  <%= form.label :customer_name, 'Nombre del Cliente' %>
+  <%= form.text_field :customer_name %>
+
+  <h3>Productos</h3>
+  <div id="products">
+    <%= form.fields_for :sale_items do |sale_item_fields| %>
+      <%= render 'sale_item_fields', f: sale_item_fields %>
+    <% end %>
+  </div>
+  <a id="add_product" href="#">Agregar Produccto</a>
+  <%= link_to 'Agregar Producto', '#', id: 'add_product', class: 'btn btn-primary' %>
+
+  <%= form.submit 'Realizar Venta' %>
+<% end %>
+
+<%= javascript_importmap_tags%>
